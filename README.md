@@ -11,5 +11,5 @@
 </ul>
 <b>this is so slay tho?!</b>
   <br> <br>
-![Calculator Screenshot][(https://github.com/samrah-x/Calculator/tree/170295a7bfe0e7b59e2b446ab518b10b0981d923/images)](https://github.com/samrah-x/Calculator/blob/4b8e6dfd3c6043c413f78ec455b3cd7e4185b0e8/images/ss.png)
+![Calculator Screenshot][(https://github.com/samrah-x/Calculator/tree/170295a7bfe0e7b59e2b446ab518b10b0981d923/images)]
 </align-left>
