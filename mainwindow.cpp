@@ -5,7 +5,9 @@
 
 // variable for first operand
 double first_number;
-bool is_entering_second_number = false;
+
+// bool for checking second input
+bool userIsTypingSecondNumber = false;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -62,19 +64,29 @@ void MainWindow::digit_pressed()
     // uses a qstring to store the number so that it can be outputted on the label
     QString new_label;
 
-    //concatenates the numbers and stores in variable
-    label_number = (ui->label->text() + button->text()).toDouble();
-
-    // store the double number in qstring. 'g' indicates char format(chk form doc). 15 indicates precision
-    new_label = QString::number(label_number,'g',15);
-
-    if (is_entering_second_number) {
-        // Clear the label for the second number and reset the flag
-        new_label = button->text();
-        is_entering_second_number = false;
-    } else {
-        // Append the digit to the current label text
-        new_label = ui->label->text() + button->text();
+    // to clear screen after operator
+    if((ui->add_button->isChecked()||ui->subtract_button->isChecked()
+         ||ui->multiply_button->isChecked()||ui->divide_button->isChecked()) && (!userIsTypingSecondNumber))
+    {
+        // doesnt append
+        label_number = button->text().toDouble();
+        userIsTypingSecondNumber = true;
+        // store the double number in qstring. 'g' indicates char format(chk form doc). 15 indicates precision
+        new_label = QString::number(label_number,'g',15);
+    }
+    else
+    {
+        if(ui->label->text().contains('.') && button->text() == "0")
+        {
+            // appends if there is a zero after decimal
+            new_label = ui->label->text() + button->text();
+        }
+        else
+        {
+            //concatenates the numbers and stores in variable
+            label_number = (ui->label->text() + button->text()).toDouble();
+            new_label = QString::number(label_number,'g',15);
+        }
     }
 
     // visualization of qstring on label
@@ -128,7 +140,15 @@ void MainWindow::unary_operation_pressed()
 
 void MainWindow::on_clear_button_released()
 {
+    // reset all
+    ui->add_button->setChecked(false);
+    ui->subtract_button->setChecked(false);
+    ui->multiply_button->setChecked(false);
+    ui->divide_button->setChecked(false);
 
+    userIsTypingSecondNumber= false;
+
+    ui->label->setText("0");
 }
 
 
@@ -171,8 +191,8 @@ void MainWindow::on_equals_button_released()
         ui->divide_button->setChecked(false);
     }
 
-    // Reset the flag
-    is_entering_second_number = false;
+    // when operator selected, number ends
+    userIsTypingSecondNumber= false;
 }
 
 void MainWindow::binary_operation_pressed()
@@ -184,12 +204,6 @@ void MainWindow::binary_operation_pressed()
 
     // to check operator pressed
     button->setChecked(true);
-
-    // Clear the label for the second number (use this if you want a clear screen when you input operator
-    //ui->label->clear();
-
-    // Indicate that the next input is for the second number
-    is_entering_second_number = true;
 
     // view the operation that is being performed
     // ui->label->setText(button->text());
