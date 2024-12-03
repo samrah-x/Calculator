@@ -1,7 +1,3 @@
-<centre>
-<title>Assignmentb03</title>
-  <hr>
-</centre>
 <align-left>
   <h1>Calculator</h1>
 <hr>
