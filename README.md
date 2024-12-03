@@ -1,5 +1,5 @@
 <centre>
-<title>Assignment# 03</title>
+<title>Assignmentb03</title>
   <hr>
 </centre>
 <align-left>
@@ -15,6 +15,6 @@
 </ol>
 <b>this is so slay tho?!</b>
   <br> <br>
-![image](https://github.com/user-attachments/assets/7e5a0e6d-8fb5-4142-b36c-f66efad5497f)
+ ![Calculator Screenshot](images/ss.png)
 
 </align-left>
