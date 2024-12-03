@@ -11,6 +11,7 @@
 </ol>
 <b>this is so slay tho?!</b>
   <br> <br>
- ![Calculator Screenshot](./images/ss.png)
+ ![ss](https://github.com/user-attachments/assets/e367155f-ee29-4c31-b24b-53b9d165fdc2)
+
 
 </align-left>
