@@ -11,6 +11,5 @@
 </ul>
 <b>this is so slay tho?!</b>
   <br> <br>
-//path to image
-![Calculator Screenshot]()
+![Calculator Screenshot](images/ss.png)
 </align-left>
