@@ -11,7 +11,6 @@
 </ol>
 <b>this is so slay tho?!</b>
   <br> <br>
- ![ss]([https://github.com/user-attachments/assets/e367155f-ee29-4c31-b24b-53b9d165fdc2](https://github.com/samrah-x/Calculator/blob/main/images/ss.png?raw=true))
-
+//path to image
 
 </align-left>
