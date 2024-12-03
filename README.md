@@ -1,6 +1,5 @@
 <align-left>
   <h1>Calculator</h1>
-<hr>
 <h2>Tools used:</h2>
 <ul>
     <li>Qt Creator IDE</li>
