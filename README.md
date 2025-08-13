@@ -10,6 +10,6 @@
 </ul>
 <b>this is so slay tho?!</b>
   <br> <br>
-![Calculator Screenshot](https://raw.githubusercontent.com/samrah-x/Calculator/main/images/ss.png)
+![Calculator Screenshot](./images/ss.png)
 
 </align-left>
